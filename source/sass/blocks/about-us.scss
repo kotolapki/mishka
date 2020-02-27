@@ -1,9 +1,9 @@
 .about-us {
-  padding: 10px 30px 30px 28px;
+  padding: 10px 30px 30px 16px;
 }
 
 .about-us__header {
-  margin: 0 0 32px 0;
+  margin: 0 0 32px 12px;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
@@ -22,8 +22,10 @@
 
 .about-us__item {
   display: block;
-  &:nth-child(1) {
+
+  &--flower {
     margin: 0 0 30px 0;
+
     &::before {
       content: url('/img/svg/iconno-feature-flower.svg');
       margin: 0 0 17px 9px;
@@ -32,8 +34,10 @@
       display: block;
     }
   }
-  &:nth-child(2) {
+
+  &--money {
     margin: 0 0 35px 0;
+
     &::before {
       content: url('/img/svg/iconno-feature-money.svg');
       margin: 0 0 26px 2px;
@@ -42,8 +46,10 @@
       display: block;
     }
   }
-  &:nth-child(3) {
+
+  &--heart {
     margin: 0 0 31px 0;
+    
     &::before {
       content: url('/img/svg/iconno-feature-heart.svg');
       margin: 0 0 22px 10px;
@@ -52,8 +58,10 @@
       display: block;
     }
   }
-  &:nth-child(4) {
+
+  &--ball {
     margin: 0 0 32px 0;
+
     &::before {
       content: url('/img/svg/iconno-feature-ball.svg');
       margin: 0 0 18px 5px;
@@ -62,8 +70,10 @@
       display: block;
     }
   }
-  &:nth-child(5) {
+
+  &--rocket {
     margin: 0 0 31px 0;
+
     &::before {
       content: url('/img/svg/iconno-feature-rocket.svg');
       margin: 0 0 27px 0;
@@ -72,7 +82,9 @@
       display: block;
     }
   }
-  &:nth-child(6) {
+
+  &--gift {
+
     &::before {
       content: url('/img/svg/iconno-feature-gift.svg');
       margin: 0 0 21px 5px;
@@ -84,19 +96,22 @@
 }
 
 @media (min-width: 560px) {
+
   .about-us__list {
-    max-height: 450px;
+    height: 372px;
   }
   .about-us__item {
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
+
+    &--flower,
+    &--money,
+    &--heart {
       margin-right: 17%;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
+
   .about-us {
     padding: 44px 47px 30px 47px;
   }
@@ -109,7 +124,8 @@
   }
 
   .about-us__list {
-    max-height: 500px;
+    height: 410px;
+    
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -119,34 +135,45 @@
     min-width: 334px;
     font-size: 20px;
     line-height: 22px;
-    &:nth-child(1) {
+
+    &--flower {
       margin: 0 0 58px 3px;
     }
-    &:nth-child(2) {
+
+    &--money {
       margin: 0 0 62px 3px;
+
       &::before {
         margin: 0 0 26px 0;
       }
     }
-    &:nth-child(3) {
+
+    &--heart {
       margin: 0 0 0 3px;
+
       &::before {
         margin: 0 0 22px 8px;
       }
     }
-    &:nth-child(4) {
+
+    &--ball {
       margin: 3px 0 60px 0;
+
       &::before {
         margin: 0 0 18px 0;
       }
     }
-    &:nth-child(5) {
+
+    &--rocket {
       margin: 0 0 59px 0;
+
       &::before {
-        margin: 0 0 27px 0;
+        margin: 0 0 27px -7px;
       }
     }
-    &:nth-child(6) {
+
+    &--gift {
+
       &::before {
         margin: 0 0 21px 2px;
       }
@@ -155,35 +182,65 @@
 }
 
 @media (min-width: 1150px) {
+
   .about-us {
-    padding: 59px 225px 30px 220px;
+    padding: 59px 225px 26px 212px;
   }
 
   .about-us__header {
-    margin: 0 0 48px 0;
+    margin: 0 0 48px 8px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .about-us__list {
-    align-content: flex-start;
+    height: 414px;
   }
 
   .about-us__item {
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      margin-left: 5px;
-    }
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6) {
-      margin-left: 16px;
-    }
-    &:nth-child(4) {
-      &:before {
-        margin: 0 0 18px 3px;
+
+    &--flower {
+      margin: 0px 0 59px 3px;
+
+      &::before {
+        margin: 0 0 19px 9px;
       }
+    }
+
+    &--money {
+      margin-left: 1px;
+
+      &::before {
+        margin: 0 0 27px 0;
+      }
+    }
+
+    &--heart {
+      margin-left: 0;
+
+      &::before {
+        margin: 0 0 24px 9px;
+      }
+    }
+
+    &--ball {
+      margin: 3px 0 62px 14px;
+
+      &:before {
+        margin: 0 0 19px 3px;
+      }
+    }
+
+    &--rocket {
+      margin-left: 14px;
+
+      &::before {
+        margin: 0 0 28px -7px;
+      }
+    }
+
+    &--gift {
+      margin-left: 14px;
     }
   }
 }

@@ -2,6 +2,7 @@
   padding: 26px 30px 59px 30px;
   position: relative;
   overflow: hidden;
+
   &::after {
     content: "";
     width: 102%;
@@ -84,29 +85,162 @@
   border: 2px solid $black;
   box-sizing: border-box;
   outline: none;
+  cursor: pointer;
+
   &:hover {
     color: $white;
-    background-color: $product-of-week-btn;
-    border-color: $product-of-week-btn;
+    background-color: $ghost-button-hover;
+    border-color: $ghost-button-hover;
   }
+
   &:active {
-    color: $product-of-week-btn-active;
+    color: $ghost-button-active;
+  }
+}
+
+.product-of-week__popup {
+  padding: 30px 0 45px 0;
+  width: 100%;
+  max-width: 568px;
+  min-height: 337px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-top: 1px solid $popup-border;
+  border-bottom: 1px solid $popup-border;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  background-color: $white;
+  opacity: 0;
+  transition: opacity 0.5s;
+  visibility: hidden;
+  z-index: 15;
+}
+
+.product-of-week__popup-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bg-popup;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s;
+  visibility: hidden;
+}
+
+.open-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.product-of-week__popup-container {
+  max-width: 354px;
+  min-width: 260px;
+}
+
+.product-of-week__popup-header {
+  margin: 0 0 13px 0;
+  min-width: 150px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product-of-week__popup-text {
+  margin: 0 0 24px 0;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.product-of-week__popup-list {
+  margin: 0 0 29px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-of-week__popup-item {
+  width: 31.5%;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product-of-week__popup-label {
+  padding: 15px 0 0 0;
+  display: block;
+  height: 52px;
+  border: 2px solid $light-grey;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: $popup-border;
+  }
+}
+
+.product-of-week__popup-radio-btn:checked ~ .product-of-week__popup-label {
+  border: 2px solid $light-green;
+}
+
+.product-of-week__popup-submit-btn {
+  width: 100%;
+  height: 52px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  background-color: $light-green;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:active {
+
+    .product-of-week__popup-submit-btn-text {
+    opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: 352px) {
+  .product-of-week__popup-separator {
+    display: none;
+  }
+
+  .product-of-week__popup-wrapper {
+    border: 1px solid $popup-border;
   }
 }
 
 @media (min-width: $tablet-width) {
+
   .product-of-week {
-    padding: 50px 50px 53px 48px;
+    padding: 33px 50px 53px 48px;
     display: flex;
     flex-direction: column;
     position: relative;
+
     &::after {
       max-width: 1050px;
     }
   }
 
   .product-of-week__header-wrapper {
-    margin: 0 0 48px 0;
+    margin: 0 0 49px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,7 +253,7 @@
   }
 
   .product-of-week__explanation {
-    margin: 0 26px 0 0;
+    margin: 8px 26px 0 0;
     width: 74px;
     font-size: 17px;
     line-height: 17px;
@@ -127,23 +261,23 @@
   }
 
   .product-of-week__description {
-    margin: 0 0 33px 0;
+    margin: 0 0 35px 0;
     width: 43.5%;
     font-size: 17px;
     line-height: 30px;
   }
 
   .product-of-week__table {
-    margin: 0 0 56px 0;
+    margin: 0 0 56px 2px;
     width: 43.5%;
   }
 
   .product-of-week__table-data-description {
-    width: 190px;
+    width: 194px;
   }
 
   .product-of-week__price {
-    margin: 0 0 35px 0;
+    margin: 0 0 34px 0;
     width: 43.5%;
     font-size: 20px;
     line-height: 24px;
@@ -159,12 +293,31 @@
     margin: 0;
     position: absolute;
     right: 51px;
-    top: 155px;
+    top: 140px;
     height: fit-content;
+  }
+
+  .product-of-week__popup-wrapper {
+  padding: 34px 0 45px 0;
+  }
+
+  .product-of-week__popup-header {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .product-of-week__popup-text {
+    margin: 0 0 22px 0;
+    font-size: 17px;
+  }
+
+  .product-of-week__popup-list {
+    margin: 0px 0 31px 0;
   }
 }
 
 @media (min-width: 1050px) {
+
   .product-of-week::after {
     width: 1050px;
     left: 50%;
@@ -173,16 +326,20 @@
 }
 
 @media (min-width: $desktop-width) {
+
   .product-of-week {
     padding: 125px 50px 96px 95px;
+
     &::after {
       background-size: contain;
     }
   }
 
   .product-of-week__header-wrapper {
-    justify-content: flex-start;
+    margin: 0 0 49px 0;
     width: 660px;
+    justify-content: flex-start;
+    
   }
 
   .product-of-week__header {

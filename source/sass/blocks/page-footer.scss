@@ -1,0 +1,130 @@
+.page-footer {
+  
+  background-color: $bg-footer;
+}
+
+.page-footer__container {
+  margin: 0 auto;
+  padding: 0 30px 0 30px;
+  max-width: 1150px;
+}
+
+.page-footer__mishka-link {
+  display: none;
+}
+
+.page-footer__social-list {
+  padding: 25px 62px 0 57px;
+  height: 81px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $grey-border-line;
+  box-sizing: border-box;
+}
+
+.page-footer__social-item {
+
+  &--insta {
+    padding: 5px 0 0 0;
+  }
+
+  &--twitter {
+    padding: 5px 0 0 0;
+  }
+}
+
+.page-footer__social-link {
+  display: block;
+  box-sizing: border-box;
+
+  &:hover {
+    fill: $dark-green;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__developed-by-block {
+  padding: 22px 39px 0 38px;
+  height: 79px;
+  box-sizing: border-box;
+}
+
+.page-footer__developed-by-link {
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    .page-footer__htmlacademy-icon {
+      fill: $dark-green;
+    }
+  }
+
+  &:active {
+    .page-footer__htmlacademy-icon {
+      fill: $dark-green;
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__text {
+  padding: 5px 0 0 0;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.page-footer__htmlacademy-icon {
+  fill: $light-green;
+}
+
+@media (min-width: 768px) {
+
+  .page-footer__container {
+    padding: 0 50px 0 50px;
+    height: 143px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .page-footer__mishka-link {
+    margin-top: 51px;
+    width: 183px;
+    display: block;
+
+    &:hover {
+      fill: $dark-green;
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .page-footer__social-list {
+    margin-top: 58px;
+    padding: 0 24px 0 18px;
+    width: 183px;
+    height: fit-content;
+    display: flex;
+    border-bottom: none;
+  }
+
+  .page-footer__developed-by-block {
+    margin-top: 58px;
+    padding: 0;
+    width: 183px;
+    height: fit-content;
+  }
+}
+
+@media (min-width: 1150px) {
+  
+  .page-footer__container {
+    padding: 0 50px 0 52px;
+  }
+}

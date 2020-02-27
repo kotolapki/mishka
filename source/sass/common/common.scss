@@ -1,8 +1,5 @@
 body {
   min-width: 320px;
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0;
   font-family: Open Sans, sans-serif;
   font-size: 15px;
   line-height: 24px;
@@ -18,27 +15,19 @@ img {
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 .container {
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 0 30px 0 30px;
-}
-
-@media (min-width: $tablet-width) {
-  main {
-    margin: 88px 0 0 0;
-  }
+  box-sizing: border-box;
 }
