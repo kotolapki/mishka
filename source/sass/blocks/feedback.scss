@@ -104,9 +104,17 @@
     background-image: url("/img/content/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left 50px;
+    background-size: 350px 457px;
 
     &::after {
       transform: scaleY(-1);
+    }
+  }
+
+  @media (min-resolution: 144dpi),
+         (min-resolution: 1.5dppx) {
+    .feedback {
+      background-image: url('/img/content/review@2x.jpg');
     }
   }
 
