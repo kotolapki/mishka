@@ -4,8 +4,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <title>Mishka</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -224,7 +228,7 @@
             <source srcset="/img/content/map-mobile@2x.jpg 2x">
             <img src="/img/content/map-mobile@1x.jpg" alt="Карта">
           </picture>
-          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/-/CBqq54fyOA" width="320" height="457"></iframe>
+          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/-/CBqq54fyOA"></iframe>
         </div>
         <button class="contacts__write-us-btn">Напишите нам</button>
       </div>
@@ -276,6 +280,5 @@
   <script src="js/svguse.js"></script>
   <script src="js/burger-menu.js"></script>
   <script src="js/popup.js"></script>
-  <script src="js/search-show.js"></script>
 </body>
 </html>
