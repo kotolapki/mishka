@@ -1,13 +1,9 @@
 'use strict'
 
-let popupOpenBtn = document.querySelector('.product-of-week__button');
-let popup = document.querySelector('.product-of-week__popup');
-let popupOverlay = document.querySelector('.product-of-week__popup-overlay');
-let popupSubmitBtn = popup.querySelector('.product-of-week__popup-submit-btn');
-
-popupSubmitBtn.onclick = function (e) {
-  e.preventDefault();
-}
+let popupOpenBtn = document.querySelector('.popup-btn');
+let popup = document.querySelector('.popup');
+let popupOverlay = document.querySelector('.popup-overlay');
+let popupSubmitBtn = popup.querySelector('.popup__submit-btn');
 
 popupOpenBtn.onclick = function () {
   popupOverlay.classList.add('open-popup');
@@ -25,4 +21,8 @@ window.addEventListener('keydown', function(e) {
 popupOverlay.onclick = function () {
   popup.classList.remove('open-popup');
   popupOverlay.classList.remove('open-popup');
+}
+
+popupSubmitBtn.onclick = function (e) {
+  e.preventDefault();
 }

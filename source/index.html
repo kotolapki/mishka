@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>Mishka</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
@@ -22,12 +23,12 @@
           <img src="img/svg/logo-mobile.svg" alt="Логотип Mishka">
         </picture> 
         <button class="navigation__button button-clicked no-js-btn" type="button" aria-label="Кнопка открыть/закрыть меню">
-          <div class="button__middle-row"></div>
+          <span class="button__middle-row"></span>
         </button>
       </div>
       <ul class="navigation__site-nav navigation-show">
         <li class="navigation__item navigation__item--catalog">
-          <a class="navigation__link" href="#">Каталог товаров</a>
+          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="navigation__item navigation__item--order">
           <a class="navigation__link" href="#">Вязание на заказ</a>
@@ -71,20 +72,20 @@
         </h1>
         <ul class="services__list">
           <li class="services__item">
-            <button class="services__item-btn services__item-btn--light" type="button">
+            <a class="services__item-btn services__item-btn--light" href="#">
               <p class="services__item-text">
                 Предметы<br> интерьера
               </p>
               <img class="services__item-icon" src="/img/svg/icon-interior.svg" alt="Настольная лампа">
-            </button>
+            </a>
           </li>
           <li class="services__item">
-            <button class="services__item-btn services__item-btn--dark" type="button">
+            <a class="services__item-btn services__item-btn--dark" href="#">
               <p class="services__item-text">
                 Детские<br> игрушки
               </p>
               <img class="services__item-icon" src="/img/svg/icon-toy.svg" alt="Часть детского конструктора">
-            </button>
+            </a>
           </li>
         </ul>
       </div>
@@ -120,35 +121,35 @@
         <img src="img/content/triple-set-mobile@1x.jpg" alt="Три вязаные корзинки друг на друге в руках">
       </picture>
       <p class="product-of-week__price">Цена: 990 руб.</p>
-      <button class="product-of-week__button" type="button">Заказать</button>
-      <div class="product-of-week__popup">
-        <div class="product-of-week__popup-container">
-          <h2 class="product-of-week__popup-header">
-            Добавить<br class="product-of-week__popup-separator"> в корзину
+      <button class="product-of-week__button popup-btn" type="button">Заказать</button>
+      <div class="product-of-week__popup popup">
+        <div class="popup__container">
+          <h2 class="popup__header">
+            Добавить<br class="popup__separator"> в корзину
           </h2>
-          <form class="product-of-week__popup-form" action="#" method="POST">
-            <p class="product-of-week__popup-text">Выберите размер:</p>
-            <ul class="product-of-week__popup-list">
-              <li class="product-of-week__popup-item">
-                <input class="product-of-week__popup-radio-btn visually-hidden" type="radio" name="size" id="small" checked aria-label="Размер S">
-                <label class="product-of-week__popup-label" for="small">S</label>
+          <form class="popup__form" action="#" method="POST">
+            <p class="popup__text">Выберите размер:</p>
+            <ul class="popup__list">
+              <li class="popup__item">
+                <input class="popup__radio-btn visually-hidden" type="radio" name="size" id="small" checked aria-label="Размер S">
+                <label class="popup__label" for="small">S</label>
               </li>
-              <li class="product-of-week__popup-item">
-                <input class="product-of-week__popup-radio-btn visually-hidden" type="radio" name="size" id="medium" aria-label="Размер M">
-                <label class="product-of-week__popup-label" for="medium">M</label>
+              <li class="popup__item">
+                <input class="popup__radio-btn visually-hidden" type="radio" name="size" id="medium" aria-label="Размер M">
+                <label class="popup__label" for="medium">M</label>
               </li>
-              <li class="product-of-week__popup-item">
-                <input class="product-of-week__popup-radio-btn visually-hidden" type="radio" name="size" id="large" aria-label="Размер L">
-                <label class="product-of-week__popup-label" for="large">L</label>
+              <li class="popup__item">
+                <input class="popup__radio-btn visually-hidden" type="radio" name="size" id="large" aria-label="Размер L">
+                <label class="popup__label" for="large">L</label>
               </li>
             </ul>
-            <button class="product-of-week__popup-submit-btn" type="submit">
-              <span class="product-of-week__popup-submit-btn-text">Добавить</span>
+            <button class="popup__submit-btn" type="submit">
+              <span class="popup__submit-btn-text">Добавить</span>
             </button>
           </form>
         </div>
       </div>
-    <div class="product-of-week__popup-overlay"></div>
+      <div class="popup-overlay"></div>
     </section>
 
     <section class="about-us container">
