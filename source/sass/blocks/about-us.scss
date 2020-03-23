@@ -1,9 +1,9 @@
 .about-us {
-  padding: 10px 30px 30px 16px;
+  padding: 10px 30px 30px 27px;
 }
 
 .about-us__header {
-  margin: 0 0 32px 12px;
+  margin: 0 0 32px 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
@@ -11,17 +11,13 @@
 }
 
 .about-us__list {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
+  padding: 0 0 0 2px;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
 }
 
 .about-us__item {
-  display: block;
 
   &--flower {
     margin: 0 0 30px 0;
@@ -40,7 +36,7 @@
 
     &::before {
       content: url('/img/svg/iconno-feature-money.svg');
-      margin: 0 0 26px 2px;
+      margin: 0 0 26px 1px;
       width: 47px;
       height: 27px;
       display: block;
@@ -52,9 +48,9 @@
     
     &::before {
       content: url('/img/svg/iconno-feature-heart.svg');
-      margin: 0 0 22px 10px;
-      width: 34px;
-      height: 27px;
+      margin: 0px 0 21px 9px;
+      width: 33px;
+      height: 28px;
       display: block;
     }
   }
@@ -76,7 +72,7 @@
 
     &::before {
       content: url('/img/svg/iconno-feature-rocket.svg');
-      margin: 0 0 27px 0;
+      margin: 0 0 27px -4px;
       width: 55px;
       height: 23px;
       display: block;
@@ -87,9 +83,9 @@
 
     &::before {
       content: url('/img/svg/iconno-feature-gift.svg');
-      margin: 0 0 21px 5px;
+      margin: 0 0 20px 4px;
       width: 33px;
-      height: 32px;
+      height: 33px;
       display: block;
     }
   }
@@ -98,14 +94,32 @@
 @media (min-width: 560px) {
 
   .about-us__list {
-    height: 372px;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .about-us__item {
 
-    &--flower,
-    &--money,
+  .about-us__item {
+    min-width: 250px;
+    flex-grow: 1;
+
+    &--ball {
+      order: 2;
+    }
+
+    &--money {
+      order: 3;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
     &--heart {
-      margin-right: 17%;
+      order: 5;
+    }
+
+    &--gift {
+      order: 6;
     }
   }
 }
@@ -124,11 +138,7 @@
   }
 
   .about-us__list {
-    height: 410px;
-    
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    padding: 0;
   }
 
   .about-us__item {
@@ -141,7 +151,7 @@
     }
 
     &--money {
-      margin: 0 0 62px 3px;
+      margin: 0 0 59px 3px;;
 
       &::before {
         margin: 0 0 26px 0;
@@ -152,15 +162,15 @@
       margin: 0 0 0 3px;
 
       &::before {
-        margin: 0 0 22px 8px;
+        margin: 2px 0 22px 8px
       }
     }
 
     &--ball {
-      margin: 3px 0 60px 0;
+      margin: 2px 0 59px;
 
       &::before {
-        margin: 0 0 18px 0;
+        margin: 0 0 18px 2px;
       }
     }
 
@@ -168,14 +178,14 @@
       margin: 0 0 59px 0;
 
       &::before {
-        margin: 0 0 27px -7px;
+        margin: 2px 0 27px -7px;
       }
     }
 
     &--gift {
 
       &::before {
-        margin: 0 0 21px 2px;
+        margin: 0 0 18px 2px;
       }
     }
   }
@@ -184,7 +194,7 @@
 @media (min-width: 1150px) {
 
   .about-us {
-    padding: 59px 225px 26px 212px;
+    padding: 59px 225px 30px 212px;
   }
 
   .about-us__header {
@@ -193,14 +203,10 @@
     line-height: 57px;
   }
 
-  .about-us__list {
-    height: 414px;
-  }
-
   .about-us__item {
 
     &--flower {
-      margin: 0px 0 59px 3px;
+      margin: 0px 0 57px 13px;
 
       &::before {
         margin: 0 0 19px 9px;
@@ -208,7 +214,7 @@
     }
 
     &--money {
-      margin-left: 1px;
+      margin-left: 13px;
 
       &::before {
         margin: 0 0 27px 0;
@@ -216,15 +222,15 @@
     }
 
     &--heart {
-      margin-left: 0;
+      margin-left: 13px;
 
       &::before {
-        margin: 0 0 24px 9px;
+        margin: 4px 0 23px 9px;
       }
     }
 
     &--ball {
-      margin: 3px 0 62px 14px;
+      margin: 5px 0 57px 0px;
 
       &:before {
         margin: 0 0 19px 3px;
@@ -232,15 +238,19 @@
     }
 
     &--rocket {
-      margin-left: 14px;
+      margin-left: 0px;
 
       &::before {
-        margin: 0 0 28px -7px;
+        margin: 3px 0 28px -6px;
       }
     }
 
     &--gift {
-      margin-left: 14px;
+      margin-left: 0px;
+
+      &::before {
+        margin: 0 0 20px 2px;
+      }
     }
   }
 }

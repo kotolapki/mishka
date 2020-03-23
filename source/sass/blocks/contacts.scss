@@ -1,5 +1,5 @@
 .contacts {
-  padding: 29px 0 0 0;
+  padding: 25px 0 0 0;
 }
 
 .contacts__header {
@@ -16,13 +16,14 @@
 
 .contacts__row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   line-height: 30px;
 }
 
 .contacts__item {
-  margin: 0 0 30px 0;
-  width: 50px;
+  margin: 0 26px 30px 0;
+  min-width: 50px;
+  word-break: break-all;
 }
 
 .contacts__link {
@@ -41,14 +42,36 @@
 .contacts__value {
   min-width: 143px;
 
+  &--underline {
+    margin-right: 2px;
+  }
+
   &--address {
     margin-right: 40px;
-    width: 144px;
+    flex-grow: 1;
+  }
+}
+
+.contacts__value-breaker--first {
+  display: none;
+}
+
+@media (min-width: 350px) {
+
+  .contacts__value--address {
+    margin: 0;
+  }
+}
+
+@media (min-width: 602px) {
+
+  .contacts__value-breaker--second {
+    display: none;
   }
 }
 
 .contacts__map-wrapper {
-  margin: 0 0 39px 0;
+  margin: 0 0 40px;
   position: relative;
 }
 
@@ -71,7 +94,7 @@
 }
 
 .contacts__map-iframe {
-  width: 320px;
+  width: 100%;
   height: 457px;
   position: absolute;
   top: 0;
@@ -82,8 +105,8 @@
 
 .contacts__write-us-btn {
   margin: 0 auto 39px auto;
+  padding: 13px 0 15px;
   width: 260px;
-  height: 52px;
   display: block;
   font-size: 18px;
   line-height: 20px;
@@ -130,32 +153,53 @@
     padding:50px 50px 55px 50px;
     font-size: 17px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .contacts__row {
     
     &--email {
-      width: 280px;
-      
+      min-width: 280px;
+      margin-right: 53px;
     }
 
     &--address {
-      width: 300px;
-      padding-right: 34px;
+      flex-grow: 1;
+      padding-right: 35px;
+    }
+  }
+
+  .contacts__value-breaker--first,
+  .contacts__value-breaker--second {
+    display: inline;
+  }
+
+  @media (min-width: 800px) {
+
+    .contacts__row--address {
+      padding: 0;
+    }
+
+    .contacts__value-breaker--first {
+      display: none;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .contacts__value-breaker--second {
+      display: none;
     }
   }
 
   .contacts__item {
-    margin: 0 0 30px 0;
-    width: 60px;
+    margin: 0 17px 30px 0;
+    min-width: 60px;
   }
 
   .contacts__value {
   
-    &--address {
-      margin-right: 0;
-      width: 225px;
+    &--underline {
+      margin: 0;
     }
   }
 
@@ -203,7 +247,7 @@
   }
 
   .contacts__header {
-    margin: 71px 0 48px 0;
+    margin: 69px 0 50px 0;
     width: 354px;
     
     font-size: 53px;
@@ -229,6 +273,11 @@
     &--address {
       width: 303px;
     }
+  }
+
+  .contacts__value-breaker--first,
+  .contacts__value-breaker--second {
+    display: inline;
   }
 
   .contacts__write-us-btn {

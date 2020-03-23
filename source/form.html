@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Форма заказа - Mishka</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <header class="page-header navigation-resize">
+    <nav class="navigation">
+      <div class="navigation__wrapper">
+        <a class="navigation__link-logo" href="index.html">
+          <picture class="navigation__logo">
+            <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+            <img src="img/svg/logo-mobile.svg" alt="Логотип Mishka">
+          </picture>
+        </a>
+        <button class="navigation__button button-clicked no-js-btn" type="button" aria-label="Кнопка открыть/закрыть меню">
+          <span class="button__middle-row"></span>
+        </button>
+      </div>
+      <ul class="navigation__site-nav navigation-show">
+        <li class="navigation__item navigation__item--catalog">
+          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="navigation__item navigation__item--order">
+          <a class="navigation__link" href="#">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="navigation__user-nav navigation-show">
+        <li class="navigation__item navigation__item--search">
+          <label class="navigation__search-label">Поиск по сайту</label>
+          <input class="navigation__search-input search-hide" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <svg class="navigation__search-icon"  width="21px" height="18px">
+            <use xlink:href="/img/svg/sprite.svg#icon-search"></use>
+          </svg>
+        </li>
+        <li class="navigation__item navigation__item--basket">
+          <a class="navigation__link" href="#">Корзина: пока пуста</a>
+          <svg class="navigation__basket-icon" width="18px" height="19px">
+            <use xlink:href="/img/svg/sprite.svg#icon-cart"></use>
+          </svg>
+        </li>
+      </ul>
+      <div class="navigation__sales-wrapper">
+        <ul class="navigation__sales-nav">
+          <li class="navigation__item navigation__item--new">
+            <a class="navigation__link" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__item--sale" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="navigation__delivery-text">Бесплатная доставка по России</p>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="order">
+      <h1 class="order__header">Вязание на заказ</h1>
+      <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="order__form form" action="#" method="post">
+        <fieldset class="form__type">
+          <div class="form__type-wrapper">
+            <legend class="form__type-heading">Тип</legend>
+            <ul class="form__type-list">
+              <li class="form__type-item">
+                <input class="form__type-radio-btn" type="radio" name="radio-btn" id="radio-accessory" value="accessory" checked>
+                <label class="form__type-radio-label" for="radio-accessory">Аксессуар для интерьера</label>
+              </li>
+              <li class="form__type-item">
+                <input class="form__type-radio-btn" type="radio" name="radio-btn" id="radio-toy" value="toy">
+                <label class="form__type-radio-label" for="radio-toy">Детская игрушка</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="form__color">
+          <div class="form__color-wrapper">
+            <legend class="form__color-heading">Цвет</legend>
+            <ul class="form__color-list">
+              <li class="form__color-item">
+                <input class="form__color-checkbox" type="checkbox" name="checkbox" id="white-checkbox" checked>
+                <label class="form__color-label" for="white-checkbox">Белый</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__color-checkbox" type="checkbox" name="checkbox" id="grey-checkbox" checked>
+                <label class="form__color-label" for="grey-checkbox">Серый</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__color-checkbox" type="checkbox" name="checkbox" id="tiffany-checkbox">
+                <label class="form__color-label" for="tiffany-checkbox">«Тиффани»</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__color-checkbox" type="checkbox" name="checkbox" id="black-checkbox">
+                <label class="form__color-label" for="black-checkbox">Черный</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__color-checkbox" type="checkbox" name="checkbox" id="pink-checkbox">
+                <label class="form__color-label" for="pink-checkbox">Розовый</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__color-checkbox" type="checkbox" name="checkbox" id="orange-checkbox">
+                <label class="form__color-label" for="orange-checkbox">Оранжевый</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="form__name">
+          <div class="form__name-wrapper">
+            <legend class="form__name-heading">ФИО</legend>
+            <ul class="form__name-list">
+              <li class="form__name-item">
+                <label class="form__name-label" for="name">Имя:</label>
+                <input class="form__name-input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+              </li>
+              <li class="form__name-item">
+                <label class="form__name-label" for="surname">Фамилия:</label>
+                <input class="form__name-input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+              </li>
+              <li class="form__name-item">
+                <label class="form__name-label" for="patronymic">Отчество:</label>
+                <input class="form__name-input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете" required>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="form__tel">
+          <div class="form__tel-wrapper">
+            <legend class="form__tel-heading">Тел</legend>
+            <input class="form__tel-input" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
+            <svg class="form__tel-icon" width="25px" height="24px">
+              <use xlink:href="/img/svg/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+        </fieldset>
+        <fieldset class="form__email">
+          <div class="form__email-wrapper">
+            <legend class="form__email-heading">e-mail</legend>
+            <input class="form__email-input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+            <svg class="form__email-icon" width="32px" height="32px">
+              <use xlink:href="/img/svg/sprite.svg#icon-mail"></use>
+            </svg>
+          </div>
+        </fieldset>
+        <fieldset class="form__text">
+          <div class="form__text-wrapper">
+            <legend class="form__text-heading">Доп</legend>
+            <textarea class="form__textarea" name="textarea" id="textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+        </fieldset>
+        <div class="form__bottom-wrapper">
+          <p class="form__required-text">*Поля обязательны для заполнения</p>
+          <button class="form__submit-btn" type="submit">Отправить заказ</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <a class="page-footer__mishka-link" href="#">
+        <svg class="page-footer__mishka-logo" width="102px" height="34px">
+          <use xlink:href="/img/svg/sprite.svg#logo-footer"></use>
+        </svg>
+      </a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item page-footer__social-item--insta">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__insta-icon" width="22px" height="21px">
+              <use xlink:href="/img/svg/sprite.svg#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-footer__social-item page-footer__social-item--fb">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__fb-icon" width="15px" height="28px">
+              <use xlink:href="/img/svg/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-footer__social-item page-footer__social-item--twitter">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__twitter-icon" width="23px" height="20px">
+              <use xlink:href="/img/svg/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__developed-by-block">
+        <a class="page-footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="page-footer__text">Разработано</p>
+          <svg class="page-footer__htmlacademy-icon" width="27px" height="34px">
+            <use xlink:href="img/svg/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svguse.js"></script>
+  <script src="js/burger-menu.js"></script>
+  <!--<script src="js/popup.js"></script>-->
+</body>
+</html>

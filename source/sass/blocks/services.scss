@@ -1,11 +1,11 @@
 .services {
-  
   background-color: $bg-services;
+  position: relative;
 }
 
 .services__container {
   margin: 0 auto;
-  padding: 69px 0 0 0;
+  padding: 70px 0 0 0;
   max-width: 1150px;
   min-height: 490px;
   background-image: url(/img/content/hero-mobile@1x.jpg);
@@ -23,7 +23,7 @@
 }
 
 .services__header {
-  margin: 0 auto 123px auto;
+  margin: 0 auto 122px auto;
   width: 260px;
   font-size: 27px;
   line-height: 30px;
@@ -36,7 +36,6 @@
   height: 103px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border: none;
   outline: none;
   cursor: pointer;
@@ -70,6 +69,7 @@
 }
 
 .services__item-text {
+  padding: 24px 0 0 0;
   font-family: Open Sans, sans-serif;
   font-size: 19px;
   line-height: 24px;
@@ -85,6 +85,18 @@
 
   .services {
     margin: 89px 0 0 0;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 34px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: url('/img/svg/bg-zigzag-fill.svg');
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
   }
 
   .services__container {
@@ -103,7 +115,7 @@
   }
 
   .services__header {
-    margin-bottom: 374px;
+    margin-bottom: 373px;
     width: 100%;
     font-size: 43px;
     line-height: 50px;
@@ -113,18 +125,6 @@
   .services__list {
     height: auto;
     display: flex;
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 34px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background-image: url('/img/svg/bg-zigzag-fill.svg');
-      background-repeat: no-repeat;
-      background-position: bottom center;
-    }
   }
   
   .services__item {
@@ -145,11 +145,30 @@
   }
 
   .services__item-text {
+    padding: 27px 0 0;
     line-height: 30px;
+  }
+
+  .services__item-icon {
+    padding: 5px 0 0 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+
+  .services {
+
+    &::after {
+      content: url(/img/svg/bg-zigzag-fill.svg);
+      width: 1266px;
+      height: 37px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      background-image: none;
+    }
+  }
   
   .services__container {
     padding: 153px 50px 0px 50px;
@@ -164,10 +183,14 @@
   }
 
   .services__header {
-    margin-bottom: 361px;
+    margin-bottom: 360px;
     font-size: 53px;
     line-height: 57px;
     font-weight: 700;
+  }
+
+  .services__item-btn--dark {
+    padding: 0 35px 0 36px;
   }
 
   .services__list {
