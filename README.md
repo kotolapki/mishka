@@ -1,3 +1,3 @@
 # mishka
-Учебный макет htmlacademy
-(html, css, sass, gulp)
+Учебный макет htmlacademy<br>
+(html5, css3, js, препроцессор sass, сборка gulp, адаптивная верстка, mobile first)
