@@ -251,6 +251,10 @@
   }
 }
 
+.form__tel-label {
+  font-size: 0;
+}
+
 .form__tel-input {
   width: 100%;
   font-size: 19px;
@@ -311,6 +315,10 @@
   }
 }
 
+.form__email-label {
+  font-size: 0;
+}
+
 .form__email-input {
   width: 100%;
   font-size: 19px;
@@ -369,6 +377,10 @@
     top: 7px;
     background-color: $light-green;
   }
+}
+
+.form__textarea-label {
+  font-size: 0;
 }
 
 .form__textarea {

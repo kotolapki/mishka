@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Интернет-магазин мягких игрушек ручной работы">
   <title>Форма заказа - Mishka</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
@@ -137,6 +138,7 @@
         <fieldset class="form__tel">
           <div class="form__tel-wrapper">
             <legend class="form__tel-heading">Тел</legend>
+            <label class="form__tel-label" for="tel">Поле ввода номера телефона</label>
             <input class="form__tel-input" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
             <svg class="form__tel-icon" width="25px" height="24px">
               <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
@@ -146,6 +148,7 @@
         <fieldset class="form__email">
           <div class="form__email-wrapper">
             <legend class="form__email-heading">e-mail</legend>
+            <label class="form__email-label" for="email">Поле ввода e-mail адреса</label>
             <input class="form__email-input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
             <svg class="form__email-icon" width="32px" height="32px">
               <use xlink:href="img/svg/sprite.svg#icon-mail"></use>
@@ -155,6 +158,7 @@
         <fieldset class="form__text">
           <div class="form__text-wrapper">
             <legend class="form__text-heading">Доп</legend>
+            <label class="form__textarea-label" for="textarea">Поле ввода пожеланий к заказу</label>
             <textarea class="form__textarea" name="textarea" id="textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </fieldset>
@@ -168,28 +172,32 @@
 
   <footer class="page-footer">
     <div class="page-footer__container">
-      <a class="page-footer__mishka-link" href="index.html" title="Главная страница">
+      <a class="page-footer__mishka-link" href="index.html">
+        Главная страница
         <svg class="page-footer__mishka-logo" width="102px" height="34px">
           <use xlink:href="img/svg/sprite.svg#logo-footer"></use>
         </svg>
       </a>
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item page-footer__social-item--insta">
-          <a class="page-footer__social-link" href="#" title="Инстаграм магазина">
+          <a class="page-footer__social-link" href="#">
+            Инстаграм магазина
             <svg class="page-footer__insta-icon" width="22px" height="21px">
               <use xlink:href="img/svg/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__social-item page-footer__social-item--fb">
-          <a class="page-footer__social-link" href="#" title="Фейсбук магазина">
+          <a class="page-footer__social-link" href="#">
+            Фейсбук магазина
             <svg class="page-footer__fb-icon" width="15px" height="28px">
               <use xlink:href="img/svg/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__social-item page-footer__social-item--twitter">
-          <a class="page-footer__social-link" href="#" title="Твиттер магазина">
+          <a class="page-footer__social-link" href="#">
+            Твиттер магазина
             <svg class="page-footer__twitter-icon" width="23px" height="20px">
               <use xlink:href="img/svg/sprite.svg#icon-twitter"></use>
             </svg>
@@ -197,7 +205,7 @@
         </li>
       </ul>
       <div class="page-footer__developed-by-block">
-        <a class="page-footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработчик">
+        <a class="page-footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="page-footer__text">Разработано</p>
           <svg class="page-footer__htmlacademy-icon" width="27px" height="34px">
             <use xlink:href="img/svg/sprite.svg#logo-htmlacademy"></use>
