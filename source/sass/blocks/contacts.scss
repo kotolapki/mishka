@@ -83,7 +83,7 @@
   position: relative;
 
   &::after {
-    content: url('/img/svg/icon-map-pin.svg');
+    content: url('../img/svg/icon-map-pin.svg');
     position: absolute;
     width: 66px;
     height: 101px;
@@ -135,7 +135,7 @@
     position: relative;
 
     &::after {
-      content: url('/img/svg/icon-flag.svg');
+      content: url('../img/svg/icon-flag.svg');
       width: 47px;
       height: 81px;
       position: absolute;

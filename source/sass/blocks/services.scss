@@ -8,7 +8,7 @@
   padding: 70px 0 0 0;
   max-width: 1150px;
   min-height: 490px;
-  background-image: url(/img/content/hero-mobile@1x.jpg);
+  background-image: url('../img/content/hero-mobile@1x.jpg');
   background-position: 50% -18px;
   background-size: 575px 373px;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 @media (min-resolution: 144dpi),
        (min-resolution: 1.5dppx) {
   .services__container {
-    background-image: url(/img/content/hero-mobile@2x.jpg);
+    background-image: url('../img/content/hero-mobile@2x.jpg');
   }
 }
 
@@ -93,7 +93,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      background-image: url('/img/svg/bg-zigzag-fill.svg');
+      background-image: url('../img/svg/bg-zigzag-fill.svg');
       background-repeat: no-repeat;
       background-position: bottom center;
     }
@@ -102,7 +102,7 @@
   .services__container {
     padding: 153px 50px 14px 50px;
     position: relative;
-    background-image: url(/img/content/hero-tablet@1x.jpg);
+    background-image: url('../img/content/hero-tablet@1x.jpg');
     background-position: 50% -1px;
     background-size: 1150px 746px;
   }
@@ -110,7 +110,7 @@
   @media (min-resolution: 144dpi),
          (min-resolution: 1.5dppx) {
     .services__container {
-      background-image: url(/img/content/hero-tablet@2x.jpg);
+      background-image: url('../img/content/hero-tablet@2x.jpg');
     }
   }
 
@@ -159,7 +159,7 @@
   .services {
 
     &::after {
-      content: url(/img/svg/bg-zigzag-fill.svg);
+      content: url('../img/svg/bg-zigzag-fill.svg');
       width: 1266px;
       height: 37px;
       position: absolute;
@@ -172,13 +172,13 @@
   
   .services__container {
     padding: 153px 50px 0px 50px;
-    background-image: url('/img/content/hero-desktop@1x.jpg');
+    background-image: url('../img/content/hero-desktop@1x.jpg');
   }
 
   @media (min-resolution: 144dpi),
          (min-resolution: 1.5dppx) {
     .services__container {
-      background-image: url('/img/content/hero-desktop@2x.jpg');
+      background-image: url('../img/content/hero-desktop@2x.jpg');
     }
   }
 

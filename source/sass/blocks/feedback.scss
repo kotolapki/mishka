@@ -9,7 +9,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url(/img/svg/bg-zigzag-line.svg);
+    background-image: url('../img/svg/bg-zigzag-line.svg');
     background-repeat: no-repeat;
     background-size: 100% 23px;
     transform: scaleY(-1);
@@ -105,7 +105,7 @@
   .feedback {
     padding: 129px 50px 105px 46px;
     position: relative;
-    background-image: url("/img/content/review@1x.jpg");
+    background-image: url('../img/content/review@1x.jpg');
     background-repeat: no-repeat;
     background-position: left 52px;
     background-size: 350px 457px;
@@ -118,7 +118,7 @@
   @media (min-resolution: 144dpi),
          (min-resolution: 1.5dppx) {
     .feedback {
-      background-image: url('/img/content/review@2x.jpg');
+      background-image: url('../img/content/review@2x.jpg');
     }
   }
 
